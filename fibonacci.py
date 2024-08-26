@@ -30,20 +30,36 @@ while True:
     except ValueError:
         print("Please enter a valid number.")
 
+piervus_list = []
+
+def looking_for_piervus(fibonacci_start_number):
+
+    fibonacci_piervus_number1 = 0
+    fibonacci_piervus_number2 = 1
+
+    while True:
+        fibonacci_piervus_number = fibonacci_piervus_number1 + fibonacci_piervus_number2
+
+        if fibonacci_start_number <= fibonacci_piervus_number:
+            return fibonacci_piervus_number2
+
+
+        fibonacci_piervus_number1 = fibonacci_piervus_number2
+        fibonacci_piervus_number2 =  fibonacci_piervus_number
+        #print(fibonacci_piervus_number)
+    #idk what im doing
+
+if ammount_piervus >= 1:
+    piervus =  looking_for_piervus(fibonacci_start_number)
+    piervus_list.append(piervus)
+
+print(piervus_list)
 
 
 
 
 
-fibonacci_piervus_number1 = 0
-fibonacci_piervus_number2 = 1
-
-while True:
-    fibonacci_piervus_number = fibonacci_piervus_number1 + fibonacci_piervus_number2
-
-    if fibonacci_start_number <= fibonacci_piervus_number:
-        break
 
 
-    fibonacci_piervus_number1 = fibonacci_piervus_number2
-    fibonacci_piervus_number2 =  fibonacci_piervus_number
+
+
