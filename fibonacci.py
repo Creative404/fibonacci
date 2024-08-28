@@ -38,7 +38,6 @@ while True:
     except ValueError:
         print("Please enter a valid number.")
 
-piervus_list = []
 
 def looking_for_piervus(fibonacci_start_number):
 
@@ -54,46 +53,83 @@ def looking_for_piervus(fibonacci_start_number):
 
         fibonacci_piervus_number1 = fibonacci_piervus_number2
         fibonacci_piervus_number2 =  fibonacci_piervus_number
-        #print(fibonacci_piervus_number)
     #idk what im doing
+
 
 
 
 #massife sitty if's
 piervus =  looking_for_piervus(fibonacci_start_number)
 if piervus >= 0 and ammount_piervus >= 1:
-    piervus_list.append(piervus) #this cant be bigger than this
-    print(piervus_list)
+    Checker = True
     ammount_piervus -=1
 
 piervus1 =  looking_for_piervus(piervus)
 if piervus1 >= 0 and ammount_piervus >= 1:
-    piervus_list.append(piervus1)
-    print(piervus_list)
+    Checker = False
+    Checker1 = True
     ammount_piervus -=1
 
 piervus2 =  looking_for_piervus(piervus1)
 if piervus1 >= 0 and ammount_piervus >= 1:
-    piervus_list.append(piervus2)
-    print(piervus_list)
+    Checker = False
+    Checker1 = False
+    Checker2 = True
     ammount_piervus -=1
 
 piervus3 =  looking_for_piervus(piervus2)
 if piervus1 >= 0 and ammount_piervus >= 1:
-    piervus_list.append(piervus3)
-    print(piervus_list)
+    Checker = False
+    Checker1 = False
+    Checker2 = False
+    Checker3 = True
     ammount_piervus -=1
 
 piervus4 =  looking_for_piervus(piervus3)
 if piervus1 >= 0 and ammount_piervus >= 1:
-    piervus_list.append(piervus4)
-    print(piervus_list)
+    Checker = False
+    Checker1 = False
+    Checker2 = False
+    Checker3 = False
+    Checker4 = True
     ammount_piervus -=1
 
-#remeber add pop ad put it in order and in if's
-#pop remove last - (its for me dot read this shi-)
+if Checker == True:
+    sum = str(fibonacci_start_number)
+    sum1 = str(piervus)
+    User_and_piervus = sum + " " + sum1
+    print(User_and_piervus)
 
+elif Checker1 == True:
+    sum = str(fibonacci_start_number)
+    sum1 = str(piervus)
+    sum2 = str(piervus1)
+    User_and_piervus = sum + " " + sum1 + " " + sum2
+    print(User_and_piervus)
 
+elif Checker2 == True:
+    sum = str(fibonacci_start_number)
+    sum1 = str(piervus)
+    sum2 = str(piervus1)
+    sum3 = str(piervus2)
+    User_and_piervus = sum + " " + sum1 + " " + sum2 + " " + sum3
+    print(User_and_piervus)
 
+elif Checker3 == True:
+    sum = str(fibonacci_start_number)
+    sum1 = str(piervus)
+    sum2 = str(piervus1)
+    sum3 = str(piervus2)
+    sum4 = str(piervus3)
+    User_and_piervus = sum + " " + sum1 + " " + sum2 + " " + sum3 + " " + sum4
+    print(User_and_piervus)
 
-
+elif Checker4 == True:
+    sum = str(fibonacci_start_number)
+    sum1 = str(piervus)
+    sum2 = str(piervus1)
+    sum3 = str(piervus2)
+    sum4 = str(piervus3)
+    sum5 = str(piervus4)
+    User_and_piervus = sum + " " + sum1 + " " + sum2 + " " + sum3 + " " + sum4 + " " + sum5
+    print(User_and_piervus)
