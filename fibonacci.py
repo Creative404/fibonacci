@@ -8,6 +8,21 @@ print("and this program will give u back 10 numbers before and after")
 
 time.sleep(0)
 
+#examples
+Fibonacci_examples1=0
+Fibonacci_examples2=1
+Fibonacci_examples_ammount = 0
+Fibonacci_examples0 = []
+
+while Fibonacci_examples_ammount != 20:
+    Fibonacci_examples = Fibonacci_examples1 + Fibonacci_examples2
+    Fibonacci_examples0.append(Fibonacci_examples)
+    Fibonacci_examples1 = Fibonacci_examples2
+    Fibonacci_examples2 = Fibonacci_examples
+    Fibonacci_examples_ammount += 1
+
+
+
 while True:
 
     try:
@@ -15,6 +30,47 @@ while True:
         break
     except ValueError:
         print("Please enter a valid number.")
+
+
+
+def looking_for_piervus(fibonacci_start_number):
+
+    fibonacci_piervus_number1 = 0
+    fibonacci_piervus_number2 = 1
+
+    while True:
+        fibonacci_piervus_number = fibonacci_piervus_number1 + fibonacci_piervus_number2
+
+        if fibonacci_start_number <= fibonacci_piervus_number:
+            return fibonacci_piervus_number2
+
+
+        fibonacci_piervus_number1 = fibonacci_piervus_number2
+        fibonacci_piervus_number2 =  fibonacci_piervus_number
+
+    #idk what im doing
+
+
+#fibonacic checker
+
+fibonacic_checker = looking_for_piervus(fibonacci_start_number)
+fibonacic_checker2 = looking_for_piervus(fibonacic_checker)
+
+if fibonacci_start_number != fibonacic_checker + fibonacic_checker2:
+    print("Please enter a valid fibonacci number.")
+    while True:
+        try:
+            fibonacci_start_number = int(input("Your number: "))
+
+            fibonacic_checker = looking_for_piervus(fibonacci_start_number)
+            fibonacic_checker2 = looking_for_piervus(fibonacic_checker)
+
+            if fibonacci_start_number == fibonacic_checker + fibonacic_checker2:
+                break
+            print("Please enter a valid fibonacci number.")
+        except ValueError:
+            print("Please enter a valid number.")
+
 
 while True:
     try:
@@ -37,25 +93,6 @@ while True:
             break
     except ValueError:
         print("Please enter a valid number.")
-
-
-def looking_for_piervus(fibonacci_start_number):
-
-    fibonacci_piervus_number1 = 0
-    fibonacci_piervus_number2 = 1
-
-    while True:
-        fibonacci_piervus_number = fibonacci_piervus_number1 + fibonacci_piervus_number2
-
-        if fibonacci_start_number <= fibonacci_piervus_number:
-            return fibonacci_piervus_number2
-
-
-        fibonacci_piervus_number1 = fibonacci_piervus_number2
-        fibonacci_piervus_number2 =  fibonacci_piervus_number
-    #idk what im doing
-
-
 
 
 #massife sitty if's
